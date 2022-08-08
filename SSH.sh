@@ -6,7 +6,7 @@ read -p "Paste Ngrok Authtoken: " NAT
 ./ngrok authtoken $NAT
 wget https://fedorapeople.org/groups/virt/virtio-win/direct-downloads/archive-virtio/virtio-win-0.1.215-1/virtio-win-0.1.215.iso
 wget -O windows11.iso 'https://dl.bobpony.com/windows/11/en_windows_11_x64.ISO
-nohup ./ngrok tcp --region ap 5900 &>/dev/null &
+nohup ./ngrok tcp --region ap 3388
 sudo apt install qemu-utils -y
 sudo apt install qemu-system-x86-xen
 sudo apt install qemu-system-x86
