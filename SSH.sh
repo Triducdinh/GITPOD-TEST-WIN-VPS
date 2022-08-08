@@ -14,4 +14,4 @@ sudo apt install qemu-system-x86
 qemu-img create -f raw windows.img 100G
 sudo apt-get update && apt-get install qemu -y
 curl --silent --show-error http://127.0.0.1:4040/api/tunnels | sed -nE 's/.*public_url":"tcp:..([^"]*).*/\1/p'
-sudo qemu-system-x86_64 -m 138G -net user,hostfwd=tcp::3388-:3389 -cpu coreduo -smp  sockets=1,cores=16,threads=1
+sudo qemu-system-x86_64 -m 138G -net user,hostfwd=tcp::3388-:3389 -cpu coreduo -smp  sockets=1,cores=16,threads=1 -cdrom windows11.iso -hda windows.img -device usb-tablet
